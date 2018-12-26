@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="invoiceplane_import_wizard" model="ir.ui.view">
+        <field name="name">invoiceplane_import.data</field>
+        <field name="model">invoiceplane.import.data</field>
+        <field name="arch"  type="xml">
+            <form string="Import Data">
+              <group string="Import Partners" name="partners_json">
+                <field name="partner_file" filename="partner_filename" />
+                <field name="partner_filename" invisible="1"/>
+              </group>
+              <group string="Import Sale Orders" name="sale_orders_json">
+                <field name="sale_order_file" filename="sale_order_filename" />
+                <field name="sale_order_filename" invisible="1"/>
+                <field name="sale_order_line_file" filename="sale_order_line_filename" />
+                <field name="sale_order_line_filename" invisible="1"/>
+              </group>
+              <group string="Import Invoices" name="invoices_json">
+                <field name="invoice_file" filename="invoice_filename" />
+                <field name="invoice_filename" invisible="1"/>
+                <field name="invoice_line_file" filename="invoice_line_filename" />
+                <field name="invoice_line_filename" invisible="1"/>
+              </group>
+
+                <footer>
+                <group name="invoiceplane_import">
+
+                </group>
+                    <button name="action_import" type="object"
+                        class="oe_highlight" string="Import"/>
+                    <button special="cancel" string="Cancel" class="oe_link"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="invoiceplane_import_action" model="ir.actions.act_window">
+        <field name="name">InvoicePlane Import Menu</field>
+        <field name="res_model">invoiceplane.import.data</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="invoiceplane_menu" parent=""
+      name="InvoicePlane"
+      web_icon="invoice_plane_to_odoo,static/description/icon.png"
+      sequence="20"/>
+
+    <menuitem id="invoiceplane_import_title_menu"
+      name="InvoicePlane"
+      parent="invoiceplane_menu"
+      sequence="20"/>
+
+    <menuitem id="invoiceplane_import_data_menu"
+      name="Import Data"
+      parent="invoiceplane_import_title_menu"
+      action="invoiceplane_import_action"
+      sequence="20"/>
+
+
+</odoo>

@@ -1,0 +1,296 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* invoiceplane_to_odoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-26 09:07+0000\n"
+"PO-Revision-Date: 2018-12-26 09:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.invoiceplane_import_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.actions.act_window,help:invoiceplane_to_odoo.invoiceplane_tracking_action
+msgid "Click to create a new \"label\"."
+msgstr "Click to create a new \"label\"."
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_create_uid
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_create_uid
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_create_date
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_create_date
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_display_name
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_display_name
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_invoiceplane_tracking
+msgid "Displays imported data"
+msgstr "Mostrar datos importados"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_invoice_filename
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_invoice_line_filename
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_partner_filename
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_sale_order_filename
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_sale_order_line_filename
+msgid "Filename"
+msgstr "Nombre de archivo"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_id
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_id
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.invoiceplane_import_wizard
+msgid "Import"
+msgstr "Importar"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.menu,name:invoiceplane_to_odoo.invoiceplane_import_data_menu
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.invoiceplane_import_wizard
+msgid "Import Data"
+msgstr "Importar datos"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.invoiceplane_import_wizard
+msgid "Import Invoices"
+msgstr "Importar facturas"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.invoiceplane_import_wizard
+msgid "Import Partners"
+msgstr "Importar clientes"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,help:invoiceplane_to_odoo.field_invoiceplane_import_data_invoice_line_file
+#: model:ir.model.fields,help:invoiceplane_to_odoo.field_invoiceplane_import_data_sale_order_line_file
+msgid "Import Sale Order Lines from this table."
+msgstr "Importa líneas de pedidos de este fichero."
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,help:invoiceplane_to_odoo.field_invoiceplane_import_data_invoice_file
+#: model:ir.model.fields,help:invoiceplane_to_odoo.field_invoiceplane_import_data_sale_order_file
+msgid "Import Sale Order from this table."
+msgstr "Importa pedidos de venta de este fichero."
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.invoiceplane_import_wizard
+msgid "Import Sale Orders"
+msgstr "Importar pedidos de venta"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_invoiceplane_import_data
+msgid "Import data through file"
+msgstr "Importar datos a través de fichero"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,help:invoiceplane_to_odoo.field_invoiceplane_import_data_partner_file
+msgid "Import partners from json."
+msgstr "Import partners from json."
+
+#. module: invoiceplane_to_odoo
+#: model:ir.actions.act_window,name:invoiceplane_to_odoo.invoiceplane_tracking_action
+#: model:ir.ui.menu,name:invoiceplane_to_odoo.invoiceplane_tracking_menu
+msgid "Imported Data"
+msgstr "Datos importados"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.view_invoiceplane_tracking_form
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.view_invoiceplane_tracking_tree
+msgid "Imported data"
+msgstr "Datos importados"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_account_invoice
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_import_invoice_line
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_invoice_lines
+msgid "Invoice Lines"
+msgstr "Líneas de factura"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.menu,name:invoiceplane_to_odoo.invoiceplane_import_title_menu
+#: model:ir.ui.menu,name:invoiceplane_to_odoo.invoiceplane_menu
+msgid "InvoicePlane"
+msgstr "InvoicePlane"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_account_invoice_invoiceplane_import
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_account_invoice_line_invoiceplane_import
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_res_partner_invoiceplane_import
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_res_users_invoiceplane_import
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_sale_order_invoiceplane_import
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_sale_order_line_invoiceplane_import
+msgid "InvoicePlane Import"
+msgstr "InvoicePlane importación"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.actions.act_window,name:invoiceplane_to_odoo.invoiceplane_import_action
+msgid "InvoicePlane Import Menu"
+msgstr "InvoicePlane menu de importación"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_account_invoice_invoiceplane_id
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_account_invoice_line_invoiceplane_id
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_res_partner_invoiceplane_id
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_res_users_invoiceplane_id
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_sale_order_invoiceplane_id
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_sale_order_line_invoiceplane_id
+msgid "InvoicePlane id"
+msgstr "InvoicePlane id"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.view_invoiceplane_tracking_form
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data___last_update
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking___last_update
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line___last_update
+msgid "Last Modified on"
+msgstr "Última Modifiación en"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_write_uid
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_write_uid
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_write_date
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_write_date
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_order_lines
+msgid "Order Lines"
+msgstr "Líneas del pedido"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.view_invoiceplane_tracking_form
+msgid "Orders"
+msgstr "Pedidos"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_import_client_line
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_invoice_count
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_order_count
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_partner_count
+msgid "Partner Count"
+msgstr "Contador de clientes"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_partner_lines
+msgid "Partner Lines"
+msgstr "Partner Lines"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.ui.view,arch_db:invoiceplane_to_odoo.view_invoiceplane_tracking_form
+msgid "Partners"
+msgstr "Empresas"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_sale_order
+msgid "Quotation"
+msgstr "Presupuesto"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_import_order_line
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_tracking_line_order_id
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model,name:invoiceplane_to_odoo.model_invoiceplane_tracking_line
+msgid "invoiceplane.tracking.line"
+msgstr "invoiceplane.tracking.line"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_partner_file
+msgid "ip_clients"
+msgstr "ip_clients"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_invoice_line_file
+msgid "ip_invoice_items"
+msgstr "ip_invoice_items"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_invoice_file
+msgid "ip_invoices"
+msgstr "ip_invoices"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_sale_order_file
+msgid "ip_quotes"
+msgstr "ip_quotes"
+
+#. module: invoiceplane_to_odoo
+#: model:ir.model.fields,field_description:invoiceplane_to_odoo.field_invoiceplane_import_data_sale_order_line_file
+msgid "ip_quotes_items"
+msgstr "ip_quotes_items"
