@@ -22,13 +22,13 @@ InvoicePlane -> Import Data
 
 Posible tables:
 
-| Files        | Creates           |
-| ------------- |:-------------:|
-| ip_clients    | Partners |
-| ip_quotes      | Sale Orders      |
-| ip_quotes_items | Sale Order Lines      |
-| ip_invoices   | Invoices      |
-| ip_invoice_items | Invoice Lines      |
+   | Files        | Creates           |
+   | ------------- |:-------------:|
+   | ip_clients    | Partners |
+   | ip_quotes      | Sale Orders      |
+   | ip_quotes_items | Sale Order Lines      |
+   | ip_invoices   | Invoices      |
+   | ip_invoice_items | Invoice Lines      |
 
 Once the import is complete, you can see what was imported going to InvoicePlane -> Data imported
 
