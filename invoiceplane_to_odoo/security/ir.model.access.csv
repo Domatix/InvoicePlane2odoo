@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_invoiceplane_tracking_line,access_invoiceplane_tracking_line,model_invoiceplane_tracking_line,base.group_user,1,1,1,1
+access_invoiceplane_tracking,access_invoiceplane_tracking,model_invoiceplane_tracking,base.group_user,1,1,1,1
