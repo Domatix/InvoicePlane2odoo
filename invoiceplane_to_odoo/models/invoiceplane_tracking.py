@@ -18,15 +18,15 @@ class InvoiceplaneTracking(models.Model):
 
     partner_count = fields.Integer(
         string='Partner Count',
-        compute='get_partner_count',
+        compute='_compute_partner_count',
         store=True)
     order_count = fields.Integer(
         string='Partner Count',
-        compute='get_sale_order_count',
+        compute='_compute_sale_order_count',
         store=True)
     invoice_count = fields.Integer(
         string='Partner Count',
-        compute='get_invoice_count',
+        compute='_compute_invoice_count',
         store=True)
     partner_lines = fields.One2many(
         comodel_name='invoiceplane.tracking.line',
@@ -42,15 +42,15 @@ class InvoiceplaneTracking(models.Model):
         string='Invoice Lines')
 
     @api.depends('partner_lines')
-    def get_partner_count(self):
+    def _compute_partner_count(self):
         self.partner_count = len(self.partner_lines.mapped('partner_id').ids)
 
     @api.depends('order_lines')
-    def get_sale_order_count(self):
+    def _compute_sale_order_count(self):
         self.order_count = len(self.order_lines.mapped('order_id').ids)
 
     @api.depends('invoice_lines')
-    def get_invoice_count(self):
+    def _compute_invoice_count(self):
         self.invoice_count = len(self.invoice_lines.mapped('invoice_id').ids)
 
     @api.multi
