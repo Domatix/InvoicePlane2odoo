@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/Domatix/InvoicePlane2odoo.svg?branch=master)](https://travis-ci.org/Domatix/InvoicePlane2odoo)
+
 <h2>InvoicePlane2odoo</h2>
 
 ***
