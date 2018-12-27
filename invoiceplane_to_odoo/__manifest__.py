@@ -14,6 +14,7 @@
     'data': [
         'wizard/import_data.xml',
         'views/invoiceplane_tracking.xml',
+        'security/ir.model.access.csv',
     ],
 
 }
