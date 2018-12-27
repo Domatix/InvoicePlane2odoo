@@ -56,42 +56,42 @@ class InvoiceplaneTracking(models.Model):
     def list_of_partners(self):
         action = {
             'domain': "[('id', 'in', " + str(
-                                            self.partner_lines.mapped(
-                                                    'partner_id').ids) + " )]",
+                self.partner_lines.mapped(
+                    'partner_id').ids) + " )]",
             'name': 'Imported Partners',
             'view_type': 'form',
             'view_mode': 'tree,form',
             'res_model': 'res.partner',
             'type': 'ir.actions.act_window',
-                  }
+        }
         return action
 
     @api.multi
     def list_of_sales_orders(self):
         action = {
             'domain': "[('id', 'in', " + str(
-                                            self.order_lines.mapped(
-                                                    'order_id').ids) + " )]",
+                self.order_lines.mapped(
+                    'order_id').ids) + " )]",
             'name': 'Imported Partners',
             'view_type': 'form',
             'view_mode': 'tree,form',
             'res_model': 'sale.order',
             'type': 'ir.actions.act_window',
-                  }
+        }
         return action
 
     @api.multi
     def list_of_invoices(self):
         action = {
             'domain': "[('id', 'in', " + str(
-                                            self.invoice_lines.mapped(
-                                                    'invoice_id').ids) + " )]",
+                self.invoice_lines.mapped(
+                    'invoice_id').ids) + " )]",
             'name': 'Imported Partners',
             'view_type': 'form',
             'view_mode': 'tree,form',
             'res_model': 'account.invoice',
             'type': 'ir.actions.act_window',
-                  }
+        }
         return action
 
 
