@@ -75,28 +75,28 @@ class ImportData(models.TransientModel):
             state_id = state_obj.search([
                 ('name', '=', partner['client_state']),
                 ('country_id', '=', country_id.id)
-                ])
+            ])
             if not partner_id:
                 values = {
-                        'invoiceplane_id': partner['client_id'],
-                        'name': partner['client_name'],
-                        'mobile': partner['client_mobile'],
-                        'phone': partner['client_phone'],
-                        'email': partner['client_email'],
-                        'street': partner['client_address_1'],
-                        'city': partner['client_city'],
-                        'state_id': state_id[0].id if state_id else False,
-                        'zip': partner['client_zip'],
-                        'country_id': country_id.id if country_id else False,
-                        'customer': True,
-                        'supplier': False,
-                        'opt_out': True,
-                        'vat': partner['client_vat_id']
-                        if vatnumber.check_vat(partner['client_vat_id'])
-                        else False,
-                        'type': 'invoice',
-                        'invoiceplane_import': True,
-                        }
+                    'invoiceplane_id': partner['client_id'],
+                    'name': partner['client_name'],
+                    'mobile': partner['client_mobile'],
+                    'phone': partner['client_phone'],
+                    'email': partner['client_email'],
+                    'street': partner['client_address_1'],
+                    'city': partner['client_city'],
+                    'state_id': state_id[0].id if state_id else False,
+                    'zip': partner['client_zip'],
+                    'country_id': country_id.id if country_id else False,
+                    'customer': True,
+                    'supplier': False,
+                    'opt_out': True,
+                    'vat': partner['client_vat_id']
+                    if vatnumber.check_vat(partner['client_vat_id'])
+                    else False,
+                    'type': 'invoice',
+                    'invoiceplane_import': True,
+                }
 
                 partner_id = partner_obj.create(values)
                 partner_array.append(partner_id.id)
@@ -108,21 +108,21 @@ class ImportData(models.TransientModel):
         order_array = []
         for order in sale_order_data:
             order_id = sale_obj.search([
-                                ('invoiceplane_id', '=', order['quote_id'])])
+                ('invoiceplane_id', '=', order['quote_id'])])
 
             if not order_id:
                 partner_id = res_obj.search([
-                                ('invoiceplane_id', '=', order['client_id'])])
+                    ('invoiceplane_id', '=', order['client_id'])])
 
                 values = {
-                        'invoiceplane_id': order['quote_id'],
-                        'partner_id': partner_id[0].id,
-                        'user_id': self.env.user.id,
-                        'date_order': order['quote_date_created'],
-                        'validity_date': order['quote_date_expires'],
-                        'client_order_ref': order['quote_number'],
-                        'invoiceplane_import': True,
-                        }
+                    'invoiceplane_id': order['quote_id'],
+                    'partner_id': partner_id[0].id,
+                    'user_id': self.env.user.id,
+                    'date_order': order['quote_date_created'],
+                    'validity_date': order['quote_date_expires'],
+                    'client_order_ref': order['quote_number'],
+                    'invoiceplane_import': True,
+                }
 
                 sale_id = sale_obj.create(values)
                 order_array.append(sale_id.id)
@@ -140,23 +140,23 @@ class ImportData(models.TransientModel):
                 [('invoiceplane_id', '=', order_line['item_id'])])
 
             product_id = product_obj.search([
-                                    ('name', '=', order_line['item_name'])])
+                ('name', '=', order_line['item_name'])])
             if not product_id:
                 product_id = product_obj.create(
-                            {'name': order_line['item_name'],
-                             'description': order_line['item_description']})
+                    {'name': order_line['item_name'],
+                     'description': order_line['item_description']})
             if not order_line_id:
                 values = {
-                        'invoiceplane_id': order_line['item_id'],
-                        'order_id': order_id.id,
-                        'name': order_line['item_description'],
-                        'product_id': product_id[0].id,
-                        'product_uom_qty': order_line['item_quantity'],
-                        'price_unit': order_line['item_price'],
-                        'invoiceplane_import': True,
-                        }
+                    'invoiceplane_id': order_line['item_id'],
+                    'order_id': order_id.id,
+                    'name': order_line['item_description'],
+                    'product_id': product_id[0].id,
+                    'product_uom_qty': order_line['item_quantity'],
+                    'price_unit': order_line['item_price'],
+                    'invoiceplane_import': True,
+                }
 
-                sale_line_id = sale_line_obj.create(values)
+                sale_line_obj.create(values)
 
     def import_invoice(self, invoice_data):
         invoice_obj = self.env['account.invoice']
@@ -168,17 +168,17 @@ class ImportData(models.TransientModel):
 
             if not invoice_id:
                 partner_id = res_obj.search([
-                            ('invoiceplane_id', '=', invoice['client_id'])])
+                    ('invoiceplane_id', '=', invoice['client_id'])])
                 values = {
-                        'number': invoice['invoice_number'],
-                        'invoiceplane_id': invoice['invoice_id'],
-                        'partner_id': partner_id[0].id,
-                        'name': invoice['invoice_number'],
-                        'user_id': self.env.user.id,
-                        'date_invoice': invoice['invoice_date_created'],
-                        'date_due': invoice['invoice_date_due'],
-                        'invoiceplane_import': True,
-                        }
+                    'number': invoice['invoice_number'],
+                    'invoiceplane_id': invoice['invoice_id'],
+                    'partner_id': partner_id[0].id,
+                    'name': invoice['invoice_number'],
+                    'user_id': self.env.user.id,
+                    'date_invoice': invoice['invoice_date_created'],
+                    'date_due': invoice['invoice_date_due'],
+                    'invoiceplane_import': True,
+                }
 
                 invoice_id = invoice_obj.create(values)
                 invoice_array.append(invoice_id.id)
@@ -198,11 +198,11 @@ class ImportData(models.TransientModel):
                 [('invoiceplane_id', '=', invoice_line['item_id'])])
 
             product_id = product_obj.search([
-                                    ('name', '=', invoice_line['item_name'])])
+                ('name', '=', invoice_line['item_name'])])
             if not product_id:
                 product_id = product_obj.create({
-                            'name': invoice_line['item_name'],
-                            'description': invoice_line['item_description']})
+                    'name': invoice_line['item_name'],
+                    'description': invoice_line['item_description']})
             if not invoice_line_id:
 
                 values = {
@@ -217,7 +217,7 @@ class ImportData(models.TransientModel):
                     'invoice_line_tax_ids': [(4, product_id[0].taxes_id.id)]
                     if product_id[0].taxes_id else [(4, tax_id.id)],
                     'invoiceplane_import': True,
-                        }
+                }
 
                 invoice_line_id = invoice_line_obj.create(values)
 
@@ -225,8 +225,8 @@ class ImportData(models.TransientModel):
     def action_import(self):
         import_obj = self.env['invoiceplane.tracking']
         import_id = import_obj.create(
-                {'name': 'Import '+' - ' + datetime.now().strftime('%d-%m-%Y'),
-                 'date': datetime.now(), })
+            {'name': 'Import ' + ' - ' + datetime.now().strftime('%d-%m-%Y'),
+             'date': datetime.now(), })
         # Partners
         if self.partner_file:
             f = tempfile.NamedTemporaryFile()
@@ -240,7 +240,8 @@ class ImportData(models.TransientModel):
             partner_ids = self.import_partner(partner_data)
             for partner_id in partner_ids:
                 import_id.write({'partner_lines': [(0, 0,
-                                {'partner_id': partner_id})]})
+                                                    {'partner_id': partner_id})
+                                                   ]})
 
         # Sale Orders
         if self.sale_order_file:
@@ -255,7 +256,7 @@ class ImportData(models.TransientModel):
             order_ids = self.import_sale_order(sale_order_data)
             for order_id in order_ids:
                 import_id.write({'order_lines': [(0, 0,
-                                {'order_id': order_id})]})
+                                                  {'order_id': order_id})]})
 
         # Sale Order Lines
         if self.sale_order_line_file:
@@ -283,7 +284,8 @@ class ImportData(models.TransientModel):
             invoice_ids = self.import_invoice(invoice_data)
             for invoice_id in invoice_ids:
                 import_id.write({'invoice_lines': [(0, 0,
-                                {'invoice_id': invoice_id})]})
+                                                    {'invoice_id': invoice_id})
+                                                   ]})
 
         # Invoice Lines
         if self.invoice_line_file:
@@ -310,10 +312,10 @@ class ImportData(models.TransientModel):
                     invoice.number = invoice.name
 
         return {
-                'view_type': 'form',
-                'view_mode': 'form',
-                'res_model': 'invoiceplane.tracking',
-                'target': 'current',
-                'res_id': import_id.id,
-                'type': 'ir.actions.act_window'
-                }
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'invoiceplane.tracking',
+            'target': 'current',
+            'res_id': import_id.id,
+            'type': 'ir.actions.act_window'
+        }
